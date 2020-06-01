@@ -10,6 +10,13 @@ jobs:
     runs-on: ubuntu-latest    
     steps:
     - uses: actions/checkout@master
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    - name: npx vue build
+      run: |
+        npx vue build src/App.vue
 
     - name: Deploy
       uses: s0/git-publish-subdir-action@master
