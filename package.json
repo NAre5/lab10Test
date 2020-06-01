@@ -1,0 +1,16 @@
+{
+  "name": "lab10-vue-2",
+  "version": "1.0.0",
+  "description": "<div dir=\"rtl\" style=\"padding:0 20% 0 20%\">",
+  "main": "vue.config.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "npx vue serve /src/App.vue"
+  },
+  "author": "",
+  "license": "ISC"
+}
