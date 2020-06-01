@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- The View -->
+<html>
+  <head>
+    <title>
+      Register Page
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <!-- The Template -->
+    <div id="template">
+      <form @submit.prevent="handleRegister">
+        <div>
+          <label for="username">Username: </label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            v-model="username"
+            placeholder="type username..."
+            required
+          />
+        </div>
+        <div>
+          <label for="password">Password: </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            v-model="password"
+            placeholder="type password..."
+            required
+          />
+        </div>
+        <input type="submit" value="submit button" />
+      </form>
+      <div v-if="submitted">
+        <!-- {{errors}} -->
+        <div v-if="errors.length">
+          ERRORS:
+          <ul>
+            <li v-for="e in errors">
+              {{ e }}
+            </li>
+          </ul>
+        </div>
+        <div v-else>
+          submit executed in success
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- The Logic -->
+<script>
+  // The Vue instance
+  var vm = new Vue({
+    el: "#template",
+    data() {
+      return {
+        username: "",
+        first_name: "",
+        last_name: "",
+        country: "",
+        password: "",
+        confirmation_password: "",
+        email: "",
+        profile_image_url: "",
+        errors: [],
+        submitted: false
+      };
+    },
+    methods: {
+      handleRegister() {
+        console.log("register started");
+
+        this.errors = [];
+        let username_len = this.username.length;
+        let password_len = this.password.length;
+
+        if (username_len < 3 || username_len > 8)
+          this.errors.push("username length need to be between 3-8");
+
+        if (password_len < 5 || password_len > 10)
+          this.errors.push("password length need to be between 5-10");
+
+        this.submitted = true;
+
+        // alert("register ended");
+      }
+    }
+  });
+</script>
+
+<!-- The Style -->
+<style></style>
