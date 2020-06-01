@@ -16,7 +16,7 @@ jobs:
         node-version: 10.x
     - name: npx vue build
       run: |
-        npx vue build src/App.vue
+        npx @vue/cli build src/App.vue
 
     - name: Deploy
       uses: s0/git-publish-subdir-action@master
