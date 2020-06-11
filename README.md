@@ -1,6 +1,6 @@
 <div dir="rtl" style="padding:0 20% 0 20%">
 
-# ברוכים הבאים ל Vue.js !!! <img src="Vue.js_Logo.png" width="50" height="43.3" alt="Vue.js Logo">
+# ברוכים הבאים ל Vue.js !!! <img src="./src/assets/Vue.js_Logo.png" width="50" height="43.3" alt="Vue.js Logo">
 
 ## הכנה
 
